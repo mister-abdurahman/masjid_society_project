@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Calendar, Clock, Info } from 'lucide-react';
+import { Calendar, Clock, Info, Quote } from 'lucide-react';
 import PrayerTimesWidget from '../components/PrayerTimesWidget';
 
 const PrayerTimes = () => {
@@ -29,63 +29,24 @@ const PrayerTimes = () => {
                 Today's Times
               </h2>
               <PrayerTimesWidget />
-              
-              <div className="mt-12 bg-white p-8 rounded-3xl border border-brand-accent/10 shadow-sm">
-                <h3 className="text-xl font-bold text-brand-primary mb-6 flex items-center gap-2">
-                  <Info className="text-brand-accent" />
-                  About Our Times
-                </h3>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  Prayer times are calculated based on the 18.0° degree angle for Fajr and Isha, which is standard for our region.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center text-sm p-3 bg-brand-muted/50 rounded-lg">
-                    <span className="font-semibold">Calculation Method:</span>
-                    <span>Islamic Society of North America (ISNA)</span>
-                  </div>
-                  <div className="flex justify-between items-center text-sm p-3 bg-brand-muted/50 rounded-lg">
-                    <span className="font-semibold">Asr Method:</span>
-                    <span>Shafi'i/Maliki/Hanbali</span>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            <div className="lg:w-1/2">
-              <h2 className="text-3xl font-bold text-brand-primary mb-8 flex items-center gap-3">
-                <Calendar className="text-brand-accent" />
-                Monthly Calendar Preview
-              </h2>
-              <div className="overflow-x-auto bg-white rounded-3xl border border-brand-accent/10 shadow-sm">
-                <table className="w-full text-left">
-                  <thead className="bg-brand-primary text-white text-xs uppercase tracking-widest font-bold">
-                    <tr>
-                      <th className="px-6 py-4">Day</th>
-                      <th className="px-6 py-4">Fajr</th>
-                      <th className="px-6 py-4">Dhuhr</th>
-                      <th className="px-6 py-4">Asr</th>
-                      <th className="px-6 py-4">Maghrib</th>
-                      <th className="px-6 py-4">Isha</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-brand-accent/5 text-slate-600 text-sm">
-                    {[1, 2, 3, 4, 5, 6, 7].map((day) => (
-                      <tr key={day} className={day === 1 ? 'bg-brand-accent/10 font-bold text-brand-primary' : 'hover:bg-brand-muted/50'}>
-                        <td className="px-6 py-4 capitalize">{new Date(2026, 1, day).toLocaleString('en-us', {weekday: 'short', day: 'numeric'})}</td>
-                        <td className="px-6 py-4">05:3{day}</td>
-                        <td className="px-6 py-4">12:30</td>
-                        <td className="px-6 py-4">15:45</td>
-                        <td className="px-6 py-4">17:1{day}</td>
-                        <td className="px-6 py-4">18:45</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <div className="p-6 text-center border-t border-brand-accent/5">
-                  <button className="text-brand-primary font-bold hover:text-brand-accent transition-colors flex items-center gap-2 mx-auto">
-                    Download Full PDF Calendar
-                    <Info size={16} />
-                  </button>
+            <div className="lg:w-1/2 flex flex-col">
+              <div className="bg-white p-10 rounded-3xl border border-brand-accent/10 shadow-sm flex-grow flex flex-col justify-center text-center relative overflow-hidden group">
+                <Quote className="absolute top-6 left-6 text-brand-accent/10 w-24 h-24 transform -rotate-12 transition-transform group-hover:scale-110" />
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold text-brand-primary mb-6 uppercase tracking-widest text-sm">
+                    Virtue of Prayer
+                  </h3>
+                  <p className="text-2xl md:text-3xl text-slate-700 font-serif italic mb-8 leading-relaxed">
+                    "The most beloved deed to Allah is the prayer at its proper time."
+                  </p>
+                  <p className="text-brand-accent font-bold">
+                    — Prophet Muhammad (ﷺ)
+                  </p>
+                  <p className="text-slate-400 text-sm mt-2">
+                    (Sahih Al-Bukhari)
+                  </p>
                 </div>
               </div>
               

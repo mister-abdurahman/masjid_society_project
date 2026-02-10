@@ -7,8 +7,7 @@ const PrayerTimesWidget = () => {
     { name: 'Asr', time: '3:45 PM', iqamah: '4:15 PM' },
     { name: 'Maghrib', time: '5:15 PM', iqamah: '5:20 PM' },
     { name: 'Isha', time: '7:45 PM', iqamah: '8:15 PM' },
-    { name: 'Jummah 1', time: '1:15 PM', iqamah: '-' },
-    { name: 'Jummah 2', time: '2:15 PM', iqamah: '-' },
+    { name: 'Jummah', time: '1:15 PM', iqamah: '-' },
   ];
 
   return (

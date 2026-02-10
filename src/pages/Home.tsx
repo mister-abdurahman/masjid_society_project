@@ -15,7 +15,7 @@ const Home = () => {
             backgroundImage: `url('https://id-preview--0a5a860e-4097-4eb3-889b-30e407f7b3ff.lovable.app/assets/hero-mosque-Cr84mpz4.jpg')`
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/90 via-brand-primary/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/70 via-brand-primary/40 to-transparent"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center gap-12">
