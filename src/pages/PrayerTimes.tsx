@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Calendar, Clock, Info, Quote } from 'lucide-react';
+import {  Clock, Quote } from 'lucide-react';
 import PrayerTimesWidget from '../components/PrayerTimesWidget';
 
 const PrayerTimes = () => {
